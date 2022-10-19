@@ -1,4 +1,4 @@
-package org.pupa.characters;
+package org.example.characters;
 
 public class Knight extends Warrior{
     static final int ATTACK = 7;

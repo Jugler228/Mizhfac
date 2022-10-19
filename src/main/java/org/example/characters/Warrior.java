@@ -1,10 +1,9 @@
-package org.pupa.characters;
+package org.example.characters;
 
 public class Warrior {
     static final int ATTACK = 5;
     private int health = 50;
 
-    // potentially virtual method
     public int getAttack(){
         return ATTACK;
     }
@@ -21,11 +20,11 @@ public class Warrior {
         this.health = health;
     }
 
+    public void dealDamage(Warrior warrior){
+        warrior.getDamage(getAttack());
+    }
 
-    /**
-     * @param warrior Enemy warrior that deals damage to this warrior
-     */
-    public void receiveDamage(Warrior warrior){
-        this.setHealth(this.getHealth() - warrior.getAttack());
+    public void getDamage(int damage){
+        setHealth(getHealth() - damage);
     }
 }
